@@ -15,45 +15,35 @@
             <property name="addRemarkComments" value="true"/>
         </commentGenerator>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://test.lenudo.com:3366/game_config?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true&amp;autoReconnect=true"
-                        userId="game_config" password="Wgc#16#">
+                        connectionURL="jdbc:mysql://test.lenudo.com:3366/award_send_rule?characterEncoding=utf-8"
+                        userId="lmn" password="CmL#328$">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
         <!-- do targetPackage 包路径  targetProject 项目名/路径  同一workspace下   -->
-        <javaModelGenerator targetPackage="com.wana.gameGroupOrg.model"
-                            targetProject="D:/idea-workspace/git-download/com.wana.gameConfig/src/main/java">
+        <javaModelGenerator targetPackage="com.wana.gameRate.model"
+                            targetProject="D:/idea-workspace/git-download/com.wana.award_send_rule/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
-       
+
         <sqlMapGenerator targetPackage="mappers"
-                         targetProject="D:/idea-workspace/git-download/com.wana.gameConfig/src/main/resources">
+                         targetProject="D:/idea-workspace/git-download/com.wana.award_send_rule/src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wana.gameGroupOrg.mapper"
-                             targetProject="D:/idea-workspace/git-download/com.wana.gameConfig/src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wana.gameRate.mapper"
+                             targetProject="D:/idea-workspace/git-download/com.wana.award_send_rule/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
-        
-        <!--<table schema="t_game_group" tableName="t_game_group" domainObjectName="GameGroup">
-            <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>-->
 
-        <!--<table schema="t_game_group_config" tableName="t_game_group_config" domainObjectName="GameGroupConfig">
+        <table schema="t_game_rate" tableName="t_game_rate" domainObjectName="GameRate">
             <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>-->
-
-        <table schema="t_game_group_org" tableName="t_game_group_org" domainObjectName="GameGroupOrg">
-            <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <generatedKey column="game_rate_id" sqlStatement="MySql" identity="true"/>
         </table>
-        
+
     </context>
 
 </generatorConfiguration>

@@ -1,4 +1,4 @@
-package com.shibei.code;
+package com.lmn.code;
 
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
@@ -24,7 +24,7 @@ public class Generator {
         try {
             List<String> warnings = new ArrayList<>();
             boolean overwrite = true;
-            File configFile = new File("src/main/resources/generatorConfig-gameConfig-old.xml");
+            File configFile = new File("src/main/resources/generatorConfig-awardsendrule-old.xml");
             out.println(configFile.getAbsolutePath());
             ConfigurationParser cp = new ConfigurationParser(warnings);
             Configuration config = cp.parseConfiguration(configFile);

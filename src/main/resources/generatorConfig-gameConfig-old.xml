@@ -9,7 +9,7 @@
     <classPathEntry location="C:/Users/wana/mysql-connector-java-5.1.47.jar"/>
     <context id="DB2Tables" targetRuntime="MyBatis3">
         <property name="javaFileEncoding" value="UTF-8"/>
-        <commentGenerator type="com.shibei.code.MyCommentGenerator">
+        <commentGenerator type="com.lmn.code.MyCommentGenerator">
             <property name="suppressAllComments" value="false"/>
             <property name="suppressDate" value="true"/>
             <property name="addRemarkComments" value="true"/>
