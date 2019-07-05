@@ -15,41 +15,31 @@
             <property name="addRemarkComments" value="true"/>
         </commentGenerator>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://test.lenudo.com:3366/game_config?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true&amp;autoReconnect=true"
-                        userId="game_config" password="Wgc#16#">
+                        connectionURL="jdbc:mysql://test.lenudo.com:3366/wechat_push?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true&amp;autoReconnect=true"
+                        userId="lmn" password="CmL#328$">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
         <!-- do targetPackage 包路径  targetProject 项目名/路径  同一workspace下   -->
-        <javaModelGenerator targetPackage="com.wana.gameGroupOrg.model"
-                            targetProject="D:/idea-workspace/git-download/com.wana.gameConfig/src/main/java">
+        <javaModelGenerator targetPackage="com.wana.eventPushConfig.model"
+                            targetProject="D:/idea-workspace/git-download/wechatpush/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
        
         <sqlMapGenerator targetPackage="mappers"
-                         targetProject="D:/idea-workspace/git-download/com.wana.gameConfig/src/main/resources">
+                         targetProject="D:/idea-workspace/git-download/wechatpush/src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wana.gameGroupOrg.mapper"
-                             targetProject="D:/idea-workspace/git-download/com.wana.gameConfig/src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wana.eventPushConfig.mapper"
+                             targetProject="D:/idea-workspace/git-download/wechatpush/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
-        
-        <!--<table schema="t_game_group" tableName="t_game_group" domainObjectName="GameGroup">
-            <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>-->
 
-        <!--<table schema="t_game_group_config" tableName="t_game_group_config" domainObjectName="GameGroupConfig">
-            <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>-->
-
-        <table schema="t_game_group_org" tableName="t_game_group_org" domainObjectName="GameGroupOrg">
+        <table schema="t_event_push_config" tableName="t_event_push_config" domainObjectName="MallConfig">
             <property name="useActualColumnNames" value="false"/>
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>

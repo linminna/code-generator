@@ -24,7 +24,7 @@ public class Generator {
         try {
             List<String> warnings = new ArrayList<>();
             boolean overwrite = true;
-            File configFile = new File("src/main/resources/generatorConfig--old.xml");
+            File configFile = new File("src/main/resources/xxx-old.xml");
             out.println(configFile.getAbsolutePath());
             ConfigurationParser cp = new ConfigurationParser(warnings);
             Configuration config = cp.parseConfiguration(configFile);
