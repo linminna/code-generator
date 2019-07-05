@@ -39,7 +39,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table schema="t_event_push_config" tableName="t_event_push_config" domainObjectName="MallConfig">
+        <table schema="t_event_push_config" tableName="t_event_push_config" domainObjectName="EventPushConfig">
             <property name="useActualColumnNames" value="false"/>
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
