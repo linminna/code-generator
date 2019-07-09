@@ -15,33 +15,33 @@
             <property name="addRemarkComments" value="true"/>
         </commentGenerator>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://test.lenudo.com:3366/award_send_rule?characterEncoding=utf-8"
-                        userId="lmn" password="CmL#328$">
+                        connectionURL="jdbc:mysql://test.lenudo.com:3366/wana_seller?characterEncoding=utf-8"
+                        userId="wana_seller" password="Wse#16$">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
         <!-- do targetPackage 包路径  targetProject 项目名/路径  同一workspace下   -->
-        <javaModelGenerator targetPackage="com.wana.cardGetLimitNew.model"
-                            targetProject="D:/idea-workspace/git-download/com.wana.award_send_rule/src/main/java">
+        <javaModelGenerator targetPackage="com.wana.accountStatement.model"
+                            targetProject="D:/idea-workspace/git-download/com.wana.seller/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <sqlMapGenerator targetPackage="mappers"
-                         targetProject="D:/idea-workspace/git-download/com.wana.award_send_rule/src/main/resources">
+                         targetProject="D:/idea-workspace/git-download/com.wana.seller/src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wana.cardGetLimitNew.mapper"
-                             targetProject="D:/idea-workspace/git-download/com.wana.award_send_rule/src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wana.accountStatement.mapper"
+                             targetProject="D:/idea-workspace/git-download/com.wana.seller/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
-
-        <table schema="t_card_get_limit_new" tableName="t_card_get_limit_new" domainObjectName="CardGetLimitNew">
-            <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="card_get_limit_id" sqlStatement="MySql" identity="true"/>
+        <!-- 数据库 表 do名   -->
+        <table schema="t_account_statement" tableName="t_account_statement" domainObjectName="AccountStatement">
+            <!--<property name="useActualColumnNames" value="false"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
         </table>
 
     </context>
