@@ -23,7 +23,7 @@
         </javaTypeResolver>
 
         <!-- do targetPackage 包路径  targetProject 项目名/路径  同一workspace下   -->
-        <javaModelGenerator targetPackage="com.wana.mallConfig.model"
+        <javaModelGenerator targetPackage="com.wana.cardPublicCodeConfig.model"
                             targetProject="D:/idea-workspace/git-download/com.wana.gameConfig/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
@@ -34,7 +34,7 @@
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wana.mallConfig.mapper"
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wana.cardPublicCodeConfig.mapper"
                              targetProject="D:/idea-workspace/git-download/com.wana.gameConfig/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
@@ -54,7 +54,13 @@
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>-->
 
-        <table schema="t_mall_config" tableName="t_mall_config" domainObjectName="MallConfig">
+        <!--<table schema="t_mall_config" tableName="t_mall_config" domainObjectName="MallConfig">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>-->
+
+        <table schema="t_card_public_code_config" tableName="t_card_public_code_config" 
+               domainObjectName="CardPublicCodeConfig">
             <property name="useActualColumnNames" value="false"/>
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>

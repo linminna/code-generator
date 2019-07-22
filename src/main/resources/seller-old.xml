@@ -23,7 +23,7 @@
         </javaTypeResolver>
 
         <!-- do targetPackage 包路径  targetProject 项目名/路径  同一workspace下   -->
-        <javaModelGenerator targetPackage="com.wana.accountStatement.model"
+        <javaModelGenerator targetPackage="com.wana.accountCostDetail.model"
                             targetProject="D:/idea-workspace/git-download/com.wana.seller/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
@@ -34,12 +34,17 @@
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wana.accountStatement.mapper"
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wana.accountCostDetail.mapper"
                              targetProject="D:/idea-workspace/git-download/com.wana.seller/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!-- 数据库 表 do名   -->
-        <table schema="t_account_statement" tableName="t_account_statement" domainObjectName="AccountStatement">
+       <!-- <table schema="t_account_statement" tableName="t_account_statement" domainObjectName="AccountStatement">
+            &lt;!&ndash;<property name="useActualColumnNames" value="false"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>&ndash;&gt;
+        </table>-->
+
+        <table schema="t_account_cost_detail" tableName="t_account_cost_detail" domainObjectName="AccountCostDetail">
             <!--<property name="useActualColumnNames" value="false"/>
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
         </table>
