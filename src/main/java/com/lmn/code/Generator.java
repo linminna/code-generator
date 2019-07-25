@@ -16,7 +16,7 @@ import java.util.List;
 import static java.lang.System.out;
 
 /**
- * Created by dongkun1 on 2017/3/14.
+ * Created by dongkun1 on 2019/3/14.
  */
 public class Generator {
 
@@ -24,7 +24,7 @@ public class Generator {
         try {
             List<String> warnings = new ArrayList<>();
             boolean overwrite = true;
-            File configFile = new File("src/main/resources/gameConfig-old.xml");
+            File configFile = new File("src/main/resources/seller-old.xml");
             out.println(configFile.getAbsolutePath());
             ConfigurationParser cp = new ConfigurationParser(warnings);
             Configuration config = cp.parseConfiguration(configFile);
