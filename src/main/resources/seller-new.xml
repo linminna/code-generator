@@ -54,15 +54,19 @@
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>-->
 
-        <table schema="t_organization" tableName="t_organization" domainObjectName="Organization">
+        <!--<table schema="t_organization" tableName="t_organization" domainObjectName="Organization">
             <property name="useActualColumnNames" value="false"/>
             <generatedKey column="organization_id" sqlStatement="MySql" identity="true"/>
-        </table>
+        </table>-->
         <!--<table schema="t_device_address_black_list" tableName="t_device_address_black_list" 
                domainObjectName="DeviceAddressBlackList">
             <property name="useActualColumnNames" value="false"/>
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>-->
+        <table schema="t_organization_group_black_list" tableName="t_organization_group_black_list" domainObjectName="OrganizationGroupBlackList">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="black_list_id" sqlStatement="MySql" identity="true"/>
+        </table>
     </context>
 
 </generatorConfiguration>

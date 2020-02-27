@@ -13,8 +13,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.lang.System.out;
-
 /**
  * Created by dongkun1 on 2019/3/14.
  */
@@ -24,8 +22,8 @@ public class Generator {
         try {
             List<String> warnings = new ArrayList<>();
             boolean overwrite = true;
-            File configFile = new File("src/main/resources/XX-new.xml");
-            out.println(configFile.getAbsolutePath());
+            File configFile = new File("src/main/resources/creditmall-new.xml");
+            System.out.println(configFile.getAbsolutePath());
             ConfigurationParser cp = new ConfigurationParser(warnings);
             Configuration config = cp.parseConfiguration(configFile);
             DefaultShellCallback callback = new DefaultShellCallback(overwrite);

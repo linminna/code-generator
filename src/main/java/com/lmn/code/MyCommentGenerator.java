@@ -29,11 +29,6 @@ import java.util.Properties;
 
 import static org.mybatis.generator.internal.util.StringUtility.isTrue;
 
-/**
- * The Class DefaultCommentGenerator.
- *
- * @author Jeff Butler
- */
 public class MyCommentGenerator implements CommentGenerator {
 
     /**
@@ -289,7 +284,7 @@ public class MyCommentGenerator implements CommentGenerator {
         }
 
         field.addJavaDocLine("/**"); //$NON-NLS-1$
-        
+
         String remarks = introspectedColumn.getRemarks();
         if (addRemarkComments && StringUtility.stringHasValue(remarks)) {
             //field.addJavaDocLine(" * Database Column Remarks:");

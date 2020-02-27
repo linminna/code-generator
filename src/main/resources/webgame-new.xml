@@ -15,51 +15,36 @@
             <property name="addRemarkComments" value="true"/>
         </commentGenerator>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://test.lenudo.com:3366/wana_device?characterEncoding=utf-8"
-                        userId="wana_device" password="Wwd$16#">
+                        connectionURL="jdbc:mysql://test.lenudo.com:3366/web_game?characterEncoding=utf-8"
+                        userId="lmn" password="CmL#328$">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
         <!-- do targetPackage 包路径  targetProject 项目名/路径  同一workspace下   -->
-        <javaModelGenerator targetPackage="com.wanatech.services.device.model"
-                            targetProject="D:/idea-workspace/wana-new/device/server/src/main/java">
+        <javaModelGenerator targetPackage="com.wanatech.services.webgame.model"
+                            targetProject="D:/idea-workspace/wana-new/webgame/server/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <sqlMapGenerator targetPackage="mapper"
-                         targetProject="D:/idea-workspace/wana-new/device/server/src/main/resources">
+                         targetProject="D:/idea-workspace/wana-new/webgame/server/src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wanatech.services.device.dao"
-                             targetProject="D:/idea-workspace/wana-new/device/server/src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wanatech.services.webgame.dao"
+                             targetProject="D:/idea-workspace/wana-new/webgame/server/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!-- 数据库 表 do名   -->
-        <!--<table schema="t_device_org_config" tableName="t_device_org_config" domainObjectName="DeviceOrgConfig" >
-            <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="id" sqlStatement="MySql" identity="true" />
-         </table>-->
-
-        <!--<table schema="t_device_group" tableName="t_device_group" domainObjectName="DeviceGroup">
+        <table schema="t_game_over_record" tableName="t_game_over_record" domainObjectName="GameOverRecord">
             <property name="useActualColumnNames" value="false"/>
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>-->
-
-        <!--<table schema="t_device_org_group" tableName="t_device_org_group" domainObjectName="DeviceOrgGroup">
-            <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>-->
-
-        <table schema="t_device_state" tableName="t_device_state" domainObjectName="DeviceState">
-            <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="device_state_id" sqlStatement="MySql" identity="true"/>
         </table>
-        <!--<table schema="t_device_address_black_list" tableName="t_device_address_black_list" 
-               domainObjectName="DeviceAddressBlackList">
+
+        <!--<table schema="t_user_login_app" tableName="t_user_login_app" domainObjectName="UserLoginApp">
             <property name="useActualColumnNames" value="false"/>
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>-->
