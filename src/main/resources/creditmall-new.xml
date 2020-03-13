@@ -18,7 +18,7 @@
                         connectionURL="jdbc:mysql://wanatestdb-public.rwlb.rds.aliyuncs.com:3306/credit_mall?characterEncoding=utf-8"
                         userId="testdb" password="Wana123456">
         </jdbcConnection>
-        <javaTypeResolver>
+        <javaTypeResolver type="com.lmn.code.MyJavaTypeResolverDefaultImpl">
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
@@ -39,10 +39,34 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table schema="t_shopping_goods_properties" tableName="t_shopping_goods_properties"
+        <!--<table schema="t_shopping_goods_properties" tableName="t_shopping_goods_properties"
                domainObjectName="ShoppingGoodsProperties">
             <property name="useActualColumnNames" value="false"/>
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>-->
+
+        <!--<table schema="t_shopping_feedback" tableName="t_shopping_feedback"
+               domainObjectName="ShoppingFeedBack">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+        <table schema="t_shopping_feedback_thumbs_up" tableName="t_shopping_feedback_thumbs_up"
+               domainObjectName="ShoppingFeedBackThumbsUp">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+-->
+        <!--<table schema="t_shopping_goods_feedback_stat" tableName="t_shopping_goods_feedback_stat"
+               domainObjectName="ShoppingGoodsFeedBackStat">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>-->
+
+        <table schema="t_shopping_order" tableName="t_shopping_order"
+               domainObjectName="ShoppingOrder">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="order_id" sqlStatement="MySql" identity="true"/>
         </table>
     </context>
 
