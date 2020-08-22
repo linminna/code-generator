@@ -16,7 +16,7 @@ public class MyJavaTypeResolverDefaultImpl extends JavaTypeResolverDefaultImpl {
 
     public MyJavaTypeResolverDefaultImpl() {
         super();
-        //把数据库的 TINYINT 映射成 Integer
+        //把数据库的 TINYINT 映射成 Short
         super.typeMap.put(Types.TINYINT, new JdbcTypeInformation("TINYINT",
                 new FullyQualifiedJavaType(Short.class.getName())));
     }

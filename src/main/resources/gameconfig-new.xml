@@ -15,8 +15,8 @@
             <property name="addRemarkComments" value="true"/>
         </commentGenerator>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://test.lenudo.com:3366/game_config?characterEncoding=utf-8"
-                        userId="game_config" password="Wgc#16#">
+                        connectionURL="jdbc:mysql://wanatestdb-public.rwlb.rds.aliyuncs.com:3306/game_config?characterEncoding=utf-8"
+                        userId="testdb" password="Wana123456">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
@@ -39,11 +39,29 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!-- 数据库 表 do名   -->
-        <table schema="t_game_group_black_list" tableName="t_game_group_black_list" 
+        <!--<table schema="t_game_group_black_list" tableName="t_game_group_black_list" 
                domainObjectName="GameGroupBlackList">
             <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="black_list_id" sqlStatement="MySql" identity="true"/>
+            <generatedKey column="black_list_id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+        </table>-->
+
+        <!--<table schema="t_xxl_level_config" tableName="t_xxl_level_config"
+               domainObjectName="XXLLevelConfig">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="level_config_id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+        </table>-->
+
+        <table schema="t_xxl_level_award" tableName="t_xxl_level_award"
+               domainObjectName="XXLLevelAward">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="level_award_id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
         </table>
+
+        <!--<table schema="t_xxl_org_level_award" tableName="t_xxl_org_level_award"
+               domainObjectName="XXLOrgLevelAward">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="org_award_id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+        </table>-->
     </context>
 
 </generatorConfiguration>

@@ -42,31 +42,60 @@
         <!--<table schema="t_shopping_goods_properties" tableName="t_shopping_goods_properties"
                domainObjectName="ShoppingGoodsProperties">
             <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
         </table>-->
 
         <!--<table schema="t_shopping_feedback" tableName="t_shopping_feedback"
                domainObjectName="ShoppingFeedBack">
             <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
         </table>
 
         <table schema="t_shopping_feedback_thumbs_up" tableName="t_shopping_feedback_thumbs_up"
                domainObjectName="ShoppingFeedBackThumbsUp">
             <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
         </table>
 -->
         <!--<table schema="t_shopping_goods_feedback_stat" tableName="t_shopping_goods_feedback_stat"
                domainObjectName="ShoppingGoodsFeedBackStat">
             <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
         </table>-->
 
-        <table schema="t_shopping_order" tableName="t_shopping_order"
+        <!--<table schema="t_shopping_order" tableName="t_shopping_order"
                domainObjectName="ShoppingOrder">
             <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="order_id" sqlStatement="MySql" identity="true"/>
+            <generatedKey column="order_id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+        </table>-->
+
+        <!--<table schema="t_shopping_goods" tableName="t_shopping_goods"
+               domainObjectName="ShoppingGoods">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="goods_id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+        </table>-->
+
+        <!--<table schema="t_shopping_user_privilege_record" tableName="t_shopping_user_privilege_record"
+               domainObjectName="ShoppingUserPrivilegeRecord">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+        </table>-->
+
+        <!--<table schema="t_shopping_order_detail" tableName="t_shopping_order_detail"
+               domainObjectName="ShoppingOrderDetail">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="order_detail_id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+        </table>-->
+        <!--<table schema="t_shopping_ad" tableName="t_shopping_ad"
+               domainObjectName="ShoppingAdvertisement">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="ad_id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+        </table>-->
+
+        <table schema="t_shopping_coupon" tableName="t_shopping_coupon"
+               domainObjectName="ShoppingCoupon">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="coupon_id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
         </table>
     </context>
 
