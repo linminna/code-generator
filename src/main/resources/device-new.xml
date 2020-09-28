@@ -6,7 +6,7 @@
 
 <generatorConfiguration>
     <!--mysql-connector jar包地址 绝对路径  -->
-    <classPathEntry location="C:/Users/wana/mysql-connector-java-5.1.47.jar"/>
+    <classPathEntry location="D:/lmn_code/mysql-connector-java-5.1.47.jar"/>
     <context id="DB2Tables" targetRuntime="MyBatis3">
         <property name="javaFileEncoding" value="UTF-8"/>
         <commentGenerator type="com.lmn.code.MyCommentGenerator">
