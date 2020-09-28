@@ -14,9 +14,10 @@
             <property name="suppressDate" value="true"/>
             <property name="addRemarkComments" value="true"/>
         </commentGenerator>
+        <!-- &allowMultiQueries=true&useSSL=false -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://test.lenudo.com:3366/wana_device?characterEncoding=utf-8"
-                        userId="wana_device" password="Wwd$16#">
+                        connectionURL="jdbc:mysql://newtest2.lenudo.com:3306/wana_device?characterEncoding=utf-8"
+                        userId="testdb" password="Wana123456%">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
@@ -54,15 +55,28 @@
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>-->
 
-        <table schema="t_device_state" tableName="t_device_state" domainObjectName="DeviceState">
+        <!--<table schema="t_device_state" tableName="t_device_state" domainObjectName="DeviceState">
             <property name="useActualColumnNames" value="false"/>
             <generatedKey column="device_state_id" sqlStatement="MySql" identity="true"/>
-        </table>
+        </table>-->
         <!--<table schema="t_device_address_black_list" tableName="t_device_address_black_list" 
                domainObjectName="DeviceAddressBlackList">
             <property name="useActualColumnNames" value="false"/>
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>-->
+
+        <!-- <table schema="t_device_day_data" tableName="t_device_day_data" domainObjectName="DeviceDayData">
+             <property name="useActualColumnNames" value="false"/>
+             <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+         </table>-->
+
+        <table schema="t_org_device_battery_config" tableName="t_org_device_battery_config"
+               domainObjectName="OrgDeviceBatteryConfig">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+        </table>
+        
+
     </context>
 
 </generatorConfiguration>

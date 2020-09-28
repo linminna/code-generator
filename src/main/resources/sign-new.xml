@@ -15,46 +15,43 @@
             <property name="addRemarkComments" value="true"/>
         </commentGenerator>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://newtest2.lenudo.com:3306/wana_log?characterEncoding=utf-8"
-                        userId="testdb" password="Wana123456%">
+                        connectionURL="jdbc:mysql://wanatestdb-public.rwlb.rds.aliyuncs.com:3306/sign?characterEncoding=utf-8"
+                        userId="testdb" password="Wana123456">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
         <!-- do targetPackage 包路径  targetProject 项目名/路径  同一workspace下   -->
-        <javaModelGenerator targetPackage="com.wanatech.services.logserver.model"
-                            targetProject="D:/idea-workspace/wana-new/logserver/server/src/main/java">
+        <javaModelGenerator targetPackage="com.wanatech.services.sign.model"
+                            targetProject="D:/idea-workspace/wana-new/sign/server/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <sqlMapGenerator targetPackage="mapper"
-                         targetProject="D:/idea-workspace/wana-new/logserver/server/src/main/resources">
+                         targetProject="D:/idea-workspace/wana-new/sign/server/src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wanatech.services.logserver.dao"
-                             targetProject="D:/idea-workspace/wana-new/logserver/server/src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wanatech.services.sign.dao"
+                             targetProject="D:/idea-workspace/wana-new/sign/server/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
-        <!-- 数据库 表 do名   -->
-        <!--<table schema="t_order_record" tableName="t_order_record" domainObjectName="OrderRecord">
-            <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="order_id" sqlStatement="MySql" identity="true"/>
-        </table>-->
 
-        <!--<table schema="t_organization_day_data" tableName="t_organization_day_data" 
-               domainObjectName="OrganizationDayData">
+        <table schema="t_sign_config" tableName="t_sign_config"
+               domainObjectName="SignConfig">
             <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
-        </table>-->
-
-        <table schema="t_organization_day_multi_prize" tableName="t_organization_day_multi_prize"
-               domainObjectName="OrganizationDayMultiPrize">
-            <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+            <generatedKey column="sign_config_id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
         </table>
+
+        <table schema="t_sign_award" tableName="t_sign_award"
+               domainObjectName="SignAward">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="sign_award_id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true"/>
+        </table>
+        
+        
     </context>
 
 </generatorConfiguration>
