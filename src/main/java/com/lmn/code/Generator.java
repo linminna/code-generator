@@ -22,7 +22,7 @@ public class Generator {
         try {
             List<String> warnings = new ArrayList<>();
             boolean overwrite = true;
-            File configFile = new File("src/main/resources/device-new.xml");
+            File configFile = new File("src/main/resources/seller-new.xml");
             System.out.println(configFile.getAbsolutePath());
             ConfigurationParser cp = new ConfigurationParser(warnings);
             Configuration config = cp.parseConfiguration(configFile);

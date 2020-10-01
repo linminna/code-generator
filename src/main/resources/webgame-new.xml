@@ -25,18 +25,18 @@
 
         <!-- do targetPackage 包路径  targetProject 项目名/路径  同一workspace下   -->
         <javaModelGenerator targetPackage="com.wanatech.services.webgame.model"
-                            targetProject="D:/idea-workspace/wana-new/webgame/server/src/main/java">
+                            targetProject="D:/lmn_code/wana/webgame/server/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <sqlMapGenerator targetPackage="mapper"
-                         targetProject="D:/idea-workspace/wana-new/webgame/server/src/main/resources">
+                         targetProject="D:/lmn_code/wana/webgame/server/src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.wanatech.services.webgame.dao"
-                             targetProject="D:/idea-workspace/wana-new/webgame/server/src/main/java">
+                             targetProject="D:/lmn_code/wana/webgame/server/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!-- 数据库 表 do名   -->
